@@ -32,6 +32,15 @@ def binary_search(lst, key):
     return -1
 
 
+# bubble sort a list
+def bubble_sort(lst):
+    n = len(lst)
+    for i in range(0, n):
+        for j in range(n - 1, i, -1):
+            if lst[j] < lst[j - 1]:
+                lst[j], lst[j - 1] = lst[j - 1], lst[j]  # swap
+
+
 # -----------------------------------------------------
 # Driver Code
 my_arr = [40, 20, 90, 70, 10, 30, 80, 50, 100, 60]
@@ -44,3 +53,6 @@ my_sorted_ist = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 
 print(binary_search(my_sorted_ist, 80))
 print(binary_search(my_sorted_ist, 33))
+
+bubble_sort(my_arr)
+print(my_arr)
